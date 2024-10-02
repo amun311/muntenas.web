@@ -41,7 +41,89 @@
     color: #ffffff;
     min-height: 100vh;
   }
-  
+
+  .gallery-info {
+    background-color: transparent;/*el color de la cabecera donde pone el nombre */
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    opacity: 0.7;
+    font-style: italic;
+  }
+
+  .header .lead {
+    max-width: 620px;
+  }
+
+  /** Below CSS is completely optional **/
+
+  .gallery-item {
+    width: 200px;
+    padding: 5px;
+  }
+  .lg-outer.lg-zoom-from-image {
+    opacity: 1;
+  }
+
+
+  .header .lead {
+    max-width: 620px;
+  }
+
+  /** Below CSS is completely optional **/
+
+  .gallery-item {
+    width: 200px;
+    padding: 5px;
+  }
+  .lg-css3{
+    background-image: linear-gradient( #ffffff 0%, #ffffff 85%);
+  }
+  .lg-thumb, .lg-thumb-outer{
+    background-image: linear-gradient( #ffffff 0%, #ffffff 100%);
+  }
+
+  .lg-toolbar .lg-close{
+    margin-left: 25px;
+    color: #f44336;
+    background-color: #f44336;
+  }
+
+  .lg-toolbar .lg-icon {
+    color: #999;
+    cursor: pointer;
+    float: right;
+    font-size: 38px;
+    height: 47px;
+    line-height: 27px;
+    padding: 10px 0;
+    text-align: center;
+    width: 50px;
+    text-decoration: none !important;
+    outline: medium none;
+    will-change: color;
+    -webkit-transition: color 0.5s linear;
+    -o-transition: color 0.5s linear;
+    transition: color 0.5s linear;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  .lg-toolbar .lg-close{
+    margin-left: 45px;
+    color: black;
+    background-color: red;
+  }
+  .lg-counter {
+    color: #999;
+    display: inline-block;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-top: 12px;
+    height: 47px;
+    vertical-align: middle;
+  }
+
   </style>
 
   <script>
@@ -106,7 +188,7 @@
     </div>
   </div>
 </div>
-  <script src='https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.js'></script>
+  <script type="module" src='https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.js'></script>
       <script id="rendered-js" type="module">
 import lightGallery from "https://cdn.skypack.dev/lightgallery@2.1.2";
