@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  
+  <link rel="apple-touch-icon" type="image/png" href="/imagenes/logo1.png" />
+
+  <meta name="apple-mobile-web-app-title" content="Galeria">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/imagenes/logo1.png" />
+
+  <link rel="mask-icon" type="image/x-icon" href="/imagenes/logo1.png" color="#111" />
+
+
+  
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+
+  <title>Baños</title>
+
+    <link rel="canonical" href="https://codepen.io/sachinchoolur/pen/gOmLwdQ">
+  
+  
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/lightgallery@2.0.1/css/lightgallery.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/lightgallery@2.0.1/css/lg-zoom.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/lightgallery@2.0.1/css/lg-thumbnail.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/lightgallery@2.0.1/css/lg-share.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/lightgallery@2.0.1/css/lg-rotate.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/lightgallery@2.0.1/css/lg-autoplay.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/lightgallery@2.0.1/css/lg-fullscreen.css'>
+<link rel='stylesheet' href='galeria.css'>
+  
+<style>
+  body {
+    padding: 0px;
+    background-color: transparent;
+    color: #ffffff;
+    min-height: 100vh;
+  }
+  
+  </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <!--div class="header d-flex flex-column align-items-center">
+  <h1 class="display-6 mt-3 mb-0">Baños</h1>
+  <p class="lead mt-2 mb-4">
+    Descripcion
+  </p>
+  <a class="btn mb-5 btn-outline-primary" href="/index.html" target="_blank">Back</a>
+</div-->
+
+<span class="gallery-info">Click en cualquier imagen para abrir la galeria</span>
+
+<div class="container-sm">
+  
+  <div class="row justify-content-center">
+    <div class="col col-md-10">
+      <script>       
+        // Create a container element for the gallery
+        var galeria = document.createElement('div');
+        galeria.classList.add('gallery-container');
+        galeria.setAttribute('id', 'animated-thumbnails-gallery');
+        
+        // Iterate over the image filenames and create gallery items
+        const folder = '/imagenes/web/'
+        let foto = ''
+        for (let i = 1; i < 36; i++) {
+          foto = 'imagen ('+i+').jpg';
+
+          // Create the <a> tag
+          var enlace = document.createElement('a');
+          enlace.classList.add('gallery-item');
+          enlace.setAttribute('data-lg-size', '1400-1400');
+          enlace.setAttribute('data-src', folder + foto);
+            
+
+          // Create the <img> tag
+          var imagen = document.createElement('img');
+          imagen.classList.add('img-responsive');
+          imagen.setAttribute('src', folder + foto);
+
+          // Append the image to the link
+          enlace.appendChild(imagen);
+
+          // Append the link to the gallery container
+          galeria.appendChild(enlace);
+        };
+
+        // Append the gallery container to the body
+        document.body.appendChild(galeria);
+      </script> 
+           
+      
+    </div>
+  </div>
+</div>
+  <script src='https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.js'></script>
+      <script id="rendered-js" type="module">
+import lightGallery from "https://cdn.skypack.dev/lightgallery@2.1.2";
+
+import lgZoom from "https://cdn.skypack.dev/lightgallery@2.1.2/plugins/zoom";
+
+import lgThumbnail from "https://cdn.skypack.dev/lightgallery@2.1.2/plugins/thumbnail";
+
+//import lgShare from "https://cdn.skypack.dev/lightgallery@2.1.2/plugins/share";
+
+import lgRotate from "https://cdn.skypack.dev/lightgallery@2.1.2/plugins/rotate";
+
+import lgAutoplay from "https://cdn.skypack.dev/lightgallery@2.1.2/plugins/autoplay";
+import lgFullscreen from "https://cdn.skypack.dev/lightgallery@2.1.2/plugins/fullscreen";
+
+$("#animated-thumbnails-gallery").
+justifiedGallery({
+  captions: false,
+  //lastRow: "hide",
+  rowHeight: 240,
+  margins: 5,
+ }).
+
+on("jg.complete", function () {
+  lightGallery(document.getElementById("animated-thumbnails-gallery"), {
+    autoplayFirstVideo: false,
+    pager: false,
+    //galleryId: "nature",
+    flipHorizontal: false,
+    flipVertical: false,
+    rotateLeft: false,
+    plugins: [
+    lgZoom,
+    lgThumbnail,
+    //lgShare,
+    lgRotate,
+    lgFullscreen,
+    lgAutoplay],
+    pinterest:false,
+    twitter:false,
+    counter: false,
+
+    mobileSettings: {
+      controls: false,
+      showCloseIcon: false,
+      download: false,
+      rotate: false } });
+
+
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+</body>
+
+</html>
