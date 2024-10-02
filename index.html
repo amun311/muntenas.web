@@ -178,7 +178,26 @@
     <button onclick="acceptCookies()">Aceptar</button>
     <button class="reject" onclick="rejectCookies()">Rechazar</button>
   </div>
-  <script type="module" src="cookies.js"></script>
+  <script>
+    function checkCookieConsent() {
+      if (!localStorage.getItem('cookieConsent')) {
+          document.getElementById('cookie-banner').style.display = 'block';
+      }
+    }
+
+    function acceptCookies() {
+      localStorage.setItem('cookieConsent', 'true');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    function rejectCookies() {
+      localStorage.setItem('cookieConsent', 'false');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    window.onload = checkCookieConsent;
+
+  </script>
   
   <footer class="py-3 my-4">
     <div class="container">
