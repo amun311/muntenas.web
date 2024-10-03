@@ -23,33 +23,40 @@
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <style>
-        @media (prefers-color-scheme: dark) {
-          body {
-              background-color: transparent;
-              color: white;
-          }
-          a, a:hover, a:visited, a:active {
+      .dark-theme {
+        display: none;
+      }
+      .light-theme {
+        display: none;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+            background-color: transparent;
             color: white;
-            text-decoration: none;
-          }
-           .dark-theme {
-            display: block;
-          }
         }
-        /* Light mode */
-        @media (prefers-color-scheme: light) {
-            body {
-                background-color: transparent;
-                color: black;
-            }
-            a, a:hover, a:visited, a:active {
-              color: black;
-              text-decoration: none;
-            }
-            .light-theme {
-              display: block;
-            }
+        .lnk {
+          color: white;
+          text-decoration: none;
         }
+        .dark-theme {
+           display: block;
+        }
+      }
+
+      /* Light mode */
+      @media (prefers-color-scheme: light) {
+        body {
+          background-color: transparent;
+          color: black;
+        }
+        .lnk {
+          color: black;
+          text-decoration: none;
+        }
+        .light-theme {
+          display: block;
+        }
+      }
 
     </style>
 </head>
@@ -73,17 +80,17 @@
             <div class="container">
 
                 <ol class="nav justify-content-center border-bottom pb-3 mb-3">
-                  <ul>
-                    <a href="mailto:alexandru.muntenas@gmail.com" >
+                  
+                    <a class="lnk" href="mailto:alexandru.muntenas@gmail.com" >
                       Alexandru Gheorghe
                     </a>
-                  </ul>
-
-                  <ul>
-                    <a href="mailto:florentina.muntenas@gmail.com">
+                  
+                  &nbsp &nbsp &nbsp &nbsp
+                  
+                    <a class="lnk" href="mailto:florentina.muntenas@gmail.com">
                       <em>Florentina Rodica</em>
                     </a>           
-                </ul>
+                
                 </ol>
             </div> 
         </h3>
@@ -91,15 +98,10 @@
 
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
               <div class="dark-theme">
-                <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="alexandru-muntenas" data-version="v1">
-                  <a class="badge-base__link LI-simple-link" href="https://es.linkedin.com/in/alexandru-muntenas?trk=profile-badge">
-                  </a>
-                </div>
-            </div>
-            <div class="light-theme">
-              <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="alexandru-muntenas" data-version="v1">
-                <a class="badge-base__link LI-simple-link" href="https://es.linkedin.com/in/alexandru-muntenas?trk=profile-badge">
-                </a>
+                <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="alexandru-muntenas" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://es.linkedin.com/in/alexandru-muntenas?trk=profile-badge"></a></div>
+              </div>
+              <div class="light-theme">
+                <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="alexandru-muntenas" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://es.linkedin.com/in/alexandru-muntenas?trk=profile-badge"></a></div>
               </div>
             </ul>
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
