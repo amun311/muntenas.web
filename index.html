@@ -142,7 +142,23 @@
       height: 47px;
       vertical-align: middle;
     }
-
+    @media (prefers-color-scheme: dark) {
+      body {
+          background-image: linear-gradient( #000000 0%, #2c2929 85%);
+          color: white;
+      }
+      #cookie-banner {
+          background-image: linear-gradient( #000000 0%, #2c2929 85%);
+          color: white;
+      }
+    }
+      /* Light mode */
+      @media (prefers-color-scheme: light) {
+        body {
+            background-color: white;
+            color: black;
+        }
+      }
   </style>
 </head>
 
@@ -163,14 +179,22 @@
   </div> 
   <br>
   <div id="galeria">
-    <iframe id="myIframe" src="/about.html" style="height:90pc; width:90%; margin-left:5%" title="Content Frame"></iframe>
+    <iframe id="myIframe" src="/about.html" style="height:30pc;width:90%; margin-left:5%" title="Content Frame"></iframe>
   </div>
   
   <script>
     function changeIframeSource(e) {
       var iframe = document.getElementById('myIframe');
       iframe.src = "/" + e + ".html";
-    }
+      if (e =="galeria"){
+          iframe.style.height= "150pc";
+      } else if (e ==="about"){
+          iframe.style.height= "30pc";
+      } else if (e =="apps"){
+          iframe.style.height= "30pc";
+      } else if (e =="contact"){
+          iframe.style.height= "30pc";
+      }}
   </script>  
   
   <div id="cookie-banner">
