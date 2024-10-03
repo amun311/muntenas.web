@@ -23,7 +23,12 @@
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <style>
-      
+      .dark-theme {
+        display: none;
+      }
+      .light-theme {
+        display: none;
+      }
       @media (prefers-color-scheme: dark) {
         body {
             background-color: transparent;
@@ -32,6 +37,9 @@
         .lnk {
           color: white;
           text-decoration: none;
+        }
+        .dark-theme {
+           display: block;
         }
       }
 
@@ -45,7 +53,9 @@
           color: black;
           text-decoration: none;
         }
-
+        .light-theme {
+          display: block;
+        }
       }
 
     </style>
@@ -87,9 +97,13 @@
         <div class="container">
 
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-              
+              <div class="dark-theme">
+                <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="alexandru-muntenas" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://es.linkedin.com/in/alexandru-muntenas?trk=profile-badge"></a></div>
+              </div>
+              <div class="light-theme">
                 <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="alexandru-muntenas" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://es.linkedin.com/in/alexandru-muntenas?trk=profile-badge"></a></div>
-             
+
+              </div>
             </ul>
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
 
