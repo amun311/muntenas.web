@@ -155,9 +155,28 @@ on("jg.complete", function () {
       showCloseIcon: false,
       download: false,
       rotate: false } });
-
-
 });
+        const container = document.getElementById("animated-thumbnails-gallery");
+        lightGallery(container, {
+          speed: 500,
+          plugins: [lgZoom, lgFullscreen]
+        });
+
+        const requestFullScreen = () => {
+          const el = document.documentElement;
+          if (el.requestFullscreen) {
+            el.requestFullscreen();
+          } else if (el.msRequestFullscreen) {
+            el.msRequestFullscreen();
+          } else if (el.mozRequestFullScreen) {
+            el.mozRequestFullScreen();
+          } else if (el.webkitRequestFullscreen) {
+            el.webkitRequestFullscreen();
+          }
+        };
+        container.addEventListener("lgAfterOpen", () => {
+          requestFullScreen();
+        });
 //# sourceURL=pen.js
     </script>
 
