@@ -177,6 +177,9 @@ on("jg.complete", function () {
         container.addEventListener("lgAfterOpen", () => {
           requestFullScreen();
         });
+        container.addEventListener("lgAfterClose", function() {
+          window.location = 'galeria.html';
+        });
 //# sourceURL=pen.js
     </script>
 
