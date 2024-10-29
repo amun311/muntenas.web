@@ -29,6 +29,7 @@
       .light-theme {
         display: none;
       }
+
       @media (prefers-color-scheme: dark) {
         body {
             background-color: transparent;
@@ -38,8 +39,16 @@
           color: white;
           text-decoration: none;
         }
+        .lnk:hover {
+          color: rgb(134, 132, 132);
+          text-shadow: 1px 1px #979696;
+        }
+        .borderbottom {
+          border-bottom:1px solid;
+          border-bottom-color: rgb(22, 22, 22);
+        }
         .dark-theme {
-           display: block;
+          display: block;
         }
       }
 
@@ -53,11 +62,19 @@
           color: black;
           text-decoration: none;
         }
+        .lnk:hover {
+          color: rgb(134, 132, 132);
+          text-shadow: 1px 1px #3f3e3e;
+        }
+        .borderbottom {
+          border-bottom:1px solid;
+          border-bottom-color: rgb(0, 0, 0);
+        }
         .light-theme {
           display: block;
         }
       }
-
+      
     </style>
 </head>
 
@@ -74,36 +91,65 @@
 </nav> -->
 
 
-    <div>
+  <div>
 
-        <h3>
-            <div class="container">
-
-                <ol class="nav justify-content-center border-bottom pb-3 mb-3">
-                  
-                    <a class="lnk" href="mailto:alexandru.muntenas@gmail.com" >
-                      Alexandru Gheorghe
-                    </a>          
-                
-                </ol>
-            </div> 
-        </h3>
-        <div class="container">
-
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        
+    <div class="container">
+      <div class="row" style="margin-bottom:32px">
+        <div class="col-md-6">
+          <ol class="nav justify-content-center pb-3 mb-3">
+            <a class="lnk" href="mailto:alexandru.muntenas@gmail.com" >
+              <h3>Alexandru Gheorghe</h3>
+            </a>          
+          </ol>
+          <div class="container">
+            <ul class="nav justify-content-center borderbottom pb-3 mb-3">
+              
+              <a href="https://www.linkedin.com/in/alexandru-muntenas/" target="_blank" class="nav-link px-2 text-muted dark-theme" >
+                <img src="/favicon/linkedin_bl.png"  height ="40"  style="vertical-align:middle;margin:0px 20px ">
+              </a>
+              <a href="https://www.linkedin.com/in/alexandru-muntenas/" target="_blank" class="nav-link px-2 text-muted light-theme" >
+                <img src="/favicon/linkedin.png"  height ="40"  style="vertical-align:middle;margin:0px 20px ">
+              </a>
+              <a href="https://www.coursera.org/user/f9ea86760e86ab20df7bc0537d2fd29c" target="_blank" class="nav-link px-2 text-muted" >
+                <img src="/favicon/coursera_o.png"  height ="40" style="vertical-align:middle;margin:0px 20px ">
+              </a>
               <a href="https://www.credly.com/users/alexandru-gheorghe-muntena.e77ea206" target="_blank" class="nav-link px-2 text-muted" >
-                <img src="/favicon/Logo.svg" height ="40" style="vertical-align:middle;margin:0px 20px ">
-                </a>
-
-              <a href="https://www.linkedin.com/in/alexandru-muntenas/" target="_blank" class="nav-link px-2 text-muted" >
-                <img src="/favicon/Liin.png"  height ="40" style="vertical-align:middle;margin:0px 20px ">
-                </a>
-            
+                <img src="/favicon/credly.png" height ="40" style="vertical-align:middle;margin:0px 20px ">
+              </a>
               <a href="Muntenas Alexandru Gheorghe_fn.pdf" class="nav-link px-2 text-muted" >
-                    <img src="/imagenes/cv.webp" height ="40" style="vertical-align:middle;margin:0px 20px ">
+                <img src="/favicon/cv_o.png" height ="40" style="vertical-align:middle;margin:0px 20px ">
+              </a>
+            </ul>
+          </div> 
+        </div>
+      
+        <div class="col-md-6">
+          <ol class="nav justify-content-center pb-3 mb-3">
+            <a class="lnk" href="mailto:florentina.muntenas@gmail.com">
+              <h3><em>Florentina Rodica</em></h3>
+            </a>           
+          </ol>
+          <div class="container">
+            <ul class="nav justify-content-center borderbottom pb-3 mb-3">
+              <a href="https://www.coursera.org/user/9f35159340963ce76c950800a9b290ce" target="_blank" class="nav-link px-2 text-muted" >
+                <img src="/favicon/coursera_o.png" height ="40"  style="vertical-align:middle;margin:0px 20px ">
               </a>
               
-              <!--<a href="/static/CV.pdf" >
+              <a href="#" class="nav-link px-2 text-muted" >
+                <img src="/favicon/cv_o.png" height ="40" style="vertical-align:middle;margin:0px 20px ">
+              </a>
+            </ul>
+          </div>
+        </div> 
+      </div>
+    </div>   
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  </div>
+</body>
+
+</html>
+<!--<a href="/static/CV.pdf" >
                   <img src="/images/cv.webp" width="80" style="vertical-align:middle;margin:0px 20px ">
                   </a> -->
               
@@ -117,31 +163,3 @@
               </div>
     </ul->
             <ul class="nav justify-content-center border-bottom pb-3 mb-3"-->
-
-                
-
-            </ul>
-        </div> 
-
-      <div>
-
-        <h3>
-            <div class="container">
-
-                <ol class="nav justify-content-center border-bottom pb-3 mb-3">
-                  
-                    
-                  
-                    <a class="lnk" href="mailto:florentina.muntenas@gmail.com">
-                      <em>Florentina Rodica</em>
-                    </a>           
-                
-                </ol>
-            </div> 
-        </h3>
-  
-        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    </div>
-</body>
-
-</html>
