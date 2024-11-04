@@ -29,7 +29,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-   background-color: rgb(255,255,255);
+   background-color: transparent;
   font-family: Arial;
   margin: 0;
 }
@@ -129,20 +129,34 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 20%;
   }
+  @media (prefers-color-scheme: dark) {
+    body {
+        background-color:transparent;
+        color: white;
+        
+    }
+  }
+    /* Light mode */
+    @media (prefers-color-scheme: light) {
+      body {
+          background-color: transparent;
+          color: black;
+      }
+    }
 </style>
 <body>
 <!-- Nav bar-->
-  <nav class="navbar shadow-sm fixed-top bg-white">
+  <nav class="navbar shadow-sm fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/templates/flori.html">
+    <a class="btn btn-secondary btn-lg" href="/templates/flori.html">
     <!--  <img src="/static/logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
       Florentina
     </a>
-    <a class="navbar-brand" href="/index.html">
+    <a class="btn btn-secondary btn-lg" href="/about.html">
    <!--   <img src="/static/logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
-      Pagina principal
+      Back
     </a>
   </div>
 </nav>
@@ -190,22 +204,22 @@ img {
 
   <div class="row">
     <div class="column">
-      <img class="demo cursor" src="/images/ali/4.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+      <img class="demo cursor" src="/images/ali/4.jpg" style="width:80%" onclick="currentSlide(1)" alt="">
     </div>
     <div class="column">
-      <img class="demo cursor" src="/images/ali/3.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+      <img class="demo cursor" src="/images/ali/3.jpg" style="width:80%" onclick="currentSlide(2)" alt="">
     </div>
     <div class="column">
-      <img class="demo cursor" src="/images/ali/1.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+      <img class="demo cursor" src="/images/ali/1.jpg" style="width:80%" onclick="currentSlide(3)" alt="">
     </div>
     <div class="column">
-      <img class="demo cursor" src="/images/ali/5.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+      <img class="demo cursor" src="/images/ali/5.jpg" style="width:80%" onclick="currentSlide(4)" alt="">
     </div>
     <div class="column">
-      <img class="demo cursor" src="/images/ali/6.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+      <img class="demo cursor" src="/images/ali/6.jpg" style="width:80%" onclick="currentSlide(5)" alt="">
     </div>    
     <div class="column">
-      <img class="demo cursor" src="/images/ali/2.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
+      <img class="demo cursor" src="/images/ali/2.jpg" style="width:80%" onclick="currentSlide(6)" alt="">
     </div>
      
   </div>
@@ -244,11 +258,6 @@ function showSlides(n) {
     
 </body>
   
-    <div class="text-center">
-      <a class="btn btn-primary btn-lg"
-        href="mailto:alexandru.muntenas@gmail.com?subject=Quero%20hablar%20contigo...">Envia correo electrónico</a>
-      <p class="text-center text-muted"
-         style="color:white;font-size:20px;">&copy; 2024 </p>
-    </div>
+    
 
 </html>

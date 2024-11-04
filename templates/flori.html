@@ -45,7 +45,7 @@ body {
   margin: 0 auto;
   overflow: hidden;
   box-shadow: 0 0 1em;
-  background-color:rgb(255,255,255);
+  background-color: transparent;
 }
 .circle .circle__inner {
   height: 100%;
@@ -137,6 +137,20 @@ body {
           clip-path: polygon(25% 6.69873%, 30.86583% 3.80602%, 37.05905% 1.70371%, 43.47369% 0.42776%, 50% 0%, 50% 50%);
   transform: rotate(-330deg);
 }
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color:transparent;
+      color: white;
+      
+  }
+}
+  /* Light mode */
+  @media (prefers-color-scheme: light) {
+    body {
+        background-color: transparent;
+        color: black;
+    }
+  }
 </style>
 
   <script>
@@ -156,15 +170,15 @@ body {
 
 <body translate="no" >
   <!-- Nav Bar -->
-<nav class="navbar shadow-sm fixed-top bg-white">
+<nav class="navbar shadow-sm fixed-top">
   <div class="container-fluid">
-       <a class="navbar-brand" href="/templates/ali.html">
+       <a class="btn btn-secondary btn-lg" href="/templates/ali.html">
     <!--  <img src="/static/logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
       Alexandru
     </a>
-    <a class="navbar-brand" href="/index.html">
+    <a class="btn btn-secondary btn-lg" href="/about.html">
      <!-- <img src="/static/logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">  -->
-      Pagina principal
+      Back
     </a>
   </div>
 </nav>
@@ -236,16 +250,7 @@ window.onload = function () {
 //# sourceURL=pen.js
     </script>
 
-  <div class="container">
-  <footer class="py-3 my-4">
-     <div class="text-center">
-      <a class="btn btn-primary btn-lg"
-        href="mailto:florentina.muntenas@gmail.com?subject=Quiero%20hablar%20contigo..&body=Nume%3A%0D%0APrenume%3A%0D%0AAdresa%3A">Envia correo electrónico</a>
-    <p class="text-center text-muted"
-       style="color:white;font-size:20px;">&copy; 2024 </p>
-     </div>
-  </footer>
-  </div>  
+  
 </body>
 
 </html>
