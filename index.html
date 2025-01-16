@@ -152,7 +152,7 @@
       bottom: 20px;
       left: 20%;
       width: 60%;
-      display:  none;
+      
       padding: 10px;
       background-color: rgba(0, 0, 0, 0.8);
       color: rgb(255, 0, 0);
@@ -208,15 +208,21 @@
       }
   </style>
   <script>
-    function checkLocation() {
-      if (window.location.href.indexOf("muntenas.eu") === -1) {
-         document.getElementById('floating-ch-banner').style.display = 'block';
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.location.href.includes("muntenas.eu")) {
+        document.getElementById('floating-ch-banner').style.display = 'none';
       }
-    }
+  });
+  
+    //function checkLocation() {
+    //  if (window.location.href.indexOf("muntenas.eu") === -1) {
+    //     document.getElementById('floating-ch-banner').style.display = 'none';
+   //   }
+   // }
   </script>
 </head>
 
-<body onload="checkLocation()">
+<body>
   <a href="http://www.muntenas.eu">
     <div>
       <!--img class="img-fluid" id="banner" src="/imagenes/ban.webp" style="min-width:340px;"!-->
