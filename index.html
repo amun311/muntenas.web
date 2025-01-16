@@ -208,8 +208,14 @@
       }
   </style>
 </head>
-
-<body>
+<script>
+  function checkLocation() {
+    if (window.location.href.includes("www.palabres.eu")) {
+       document.getElementById('floating-ch-banner').style.display = 'none';
+    }
+  }
+</script>
+<body onload="checkLocation()">
   <a href="http://www.muntenas.eu">
     <div>
       <!--img class="img-fluid" id="banner" src="/imagenes/ban.webp" style="min-width:340px;"!-->
@@ -223,9 +229,7 @@
   </div>
   
   <script>
-    if (window.location.href.includes("www.palabres.eu")) {
-       document.getElementById('floating-ch-banner').style.display = 'none';
-    }
+    
   function dismissBanner() {
     document.getElementById('floating-ch-banner').style.display = 'none';
     //window.location.href = 'http://www.muntenas.eu';
