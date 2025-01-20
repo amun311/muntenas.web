@@ -23,12 +23,22 @@
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   
     <style>
-   .center {
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 50%;
-   }
+      .zoom {
+        transition: transform 0.2s; /* Animation */
+       
+      } 
+
+      .zoom:hover {
+        transform: scale(1.5); /* Zoom in (increase size by 1.5x) */
+      }
+   
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
       @media (prefers-color-scheme: dark) {
         body {
             background-color:transparent;
@@ -36,13 +46,13 @@ width: 50%;
         }
       }
         /* Light mode */
-        @media (prefers-color-scheme: light) {
+      @media (prefers-color-scheme: light) {
           body {
               background-color: transparent;
               color: black;
           }
-        }
-  </style>
+      }
+    </style>
 </head>
 
 <body>
@@ -51,7 +61,7 @@ width: 50%;
   <div class="container">
     
     <div class="row" style="margin-bottom:32px">
-      <div class="col-md-6">
+      <div class="col-md-8">
         <p class="lead">
           Es cierto que la época de la información gratuita nos ha abierto un mundo de posibilidades para aprender. Con solo un clic, podemos acceder a una gran cantidad de información sobre cualquier tema que nos interese. Esto nos permite ampliar nuestros conocimientos y desarrollar nuevas habilidades.
         </p>
@@ -62,8 +72,8 @@ width: 50%;
           Estamos agradecidos de vivir en una época en la que la información está al alcance de todos. Creemos que esto es una oportunidad única para aprender y crecer como individuos.
         </p>
       </div>
-      <div class="col-md-6">
-        <img class = "center" src="/static/us.jpg" usemap="#us" style="width:290px;height:384px;border-radius:4px;">
+      <div class="col-md-4">
+        <img class = "center zoom" src="/static/us.jpg" usemap="#us" style="width:290px;height:384px;border-radius:4px;">
         <!-- Maps -->
          
          <!-- <map name="us"> -->

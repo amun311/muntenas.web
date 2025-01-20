@@ -24,12 +24,20 @@
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/lightgallery@2.0.1/css/lg-fullscreen.css'>
   
   <style>
+    .zoom {
+      transition: transform 0.2s; /* Animation */
+     
+    } 
 
+    .zoom:hover {
+      transform: scale(1.5); /* Zoom in (increase size by 1.5x) */
+    }
     .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    margin-bottom: 5px;
+    width: 80%;
     }
     #banner {
       height: 460px;
@@ -217,54 +225,60 @@
 </head>
 
 <body>
-  <a href="http://www.muntenas.eu">
+  
     <div>
       <!--img class="img-fluid" id="banner" src="/imagenes/ban.webp" style="min-width:340px;"!-->
-      <img class="img-fluid"  src="/imagenes/ban.webp" style="min-width:340px;">
+      <img class="img-fluid" src="/imagenes/ban2.webp" style="min-width:340px; margin-bottom: 16px;">
       
     </div>
-  </a>  
-  <div id="floating-ch-banner">
-    <div id="banner-ch-text">Les informamos que a partir de 01/02/2025 nuestra página web se encontrará en la siguiente dirección: <a href="http://www.muntenas.eu" style="color: white;">www.muntenas.eu</a></div>
-    <button id="dismiss-ch-btn" onclick="dismissBanner()">OK</button>
-  </div>
   
-  <script>
-    
-  function dismissBanner() {
-    document.getElementById('floating-ch-banner').style.display = 'none';
-    window.location.href = 'http://www.muntenas.eu';
-  }
-  </script>
-  <div class="container">
-    <div class="row">
-      <div class="col text-center">
-        <button type="button" class="btn btn-secondary btn-lg" onclick="changeIframeSource('about')">Acerca de</button>
-        <button type="button" class="btn btn-secondary btn-lg" onclick="changeIframeSource('apps')">Aplicaciones</button>
-        <button type="button" class="btn btn-secondary btn-lg" onclick="changeIframeSource('galeria')">Galeria</button>
-        <button type="button" class="btn btn-secondary btn-lg" onclick="changeIframeSource('contact')">Contacta</button>
-      </div>
+    <div id="floating-ch-banner">
+      <div id="banner-ch-text">Les informamos que a partir de 01/02/2025 nuestra página web se encontrará en la siguiente dirección: <a href="http://www.muntenas.eu" style="color: white;">www.muntenas.eu</a></div>
+      <button id="dismiss-ch-btn" class="btn-lg" onclick="dismissBanner('ok')">OK</button>
+      <button id="dismiss-ch-btn" class="btn-lg" onclick="dismissBanner('cancel')">Cancel</button>
     </div>
-  </div> 
-  <br>
-  <div id="galeria">
-    <iframe id="myIframe" src="/about.html" style="height:30pc;width:90%; margin-left:5%" title="Content Frame"></iframe>
-  </div>
-  
-  <script>
-    function changeIframeSource(e) {
-      var iframe = document.getElementById('myIframe');
-      iframe.src = "/" + e + ".html";
-      if (e =="galeria"){
-          iframe.style.height= "150pc";
-      } else if (e ==="about"){
-          iframe.style.height= "30pc";
-      } else if (e =="apps"){
-          iframe.style.height= "30pc";
-      } else if (e =="contact"){
-          iframe.style.height= "30pc";
-      }}
-  </script>  
+    
+    <script>
+      
+    function dismissBanner(e) {
+      if (e === 'ok') {
+        document.getElementById('floating-ch-banner').style.display = 'none';
+        window.location.href = 'http://www.muntenas.eu';
+      } else {
+        document.getElementById('floating-ch-banner').style.display = 'none';
+      }
+      
+    }
+    </script>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <button type="button" class="btn btn-secondary btn-lg zoom" onclick="changeIframeSource('about')">Acerca de</button>
+          <button type="button" class="btn btn-secondary btn-lg zoom" onclick="changeIframeSource('apps')">Aplicaciones</button>
+          <button type="button" class="btn btn-secondary btn-lg zoom" onclick="changeIframeSource('galeria')">Galeria</button>
+          <button type="button" class="btn btn-secondary btn-lg zoom" onclick="changeIframeSource('contact')">Contacta</button>
+        </div>
+      </div>
+    </div> 
+    <br>
+    <div id="galeria">
+      <iframe id="myIframe" src="/about.html" style="height:30pc;width:90%; margin-left:5%" title="Content Frame"></iframe>
+    </div>
+    
+    <script>
+      function changeIframeSource(e) {
+        var iframe = document.getElementById('myIframe');
+        iframe.src = "/" + e + ".html";
+        if (e =="galeria"){
+            iframe.style.height= "115pc";
+        } else if (e ==="about"){
+            iframe.style.height= "30pc";
+        } else if (e =="apps"){
+            iframe.style.height= "30pc";
+        } else if (e =="contact"){
+            iframe.style.height= "30pc";
+        }}
+    </script>   
   
   <div id="cookie-banner">
     <p>Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptas el uso de cookies. <a href="/templates/cookies.html">Más información</a>.</p>
@@ -294,7 +308,7 @@
   
   <footer class="py-3 my-4">
     <div class="container">
-      <p class="text-center text-muted">© 2024</p>
+      <p class="text-center text-muted">© 2025</p>
     </div>
   </footer>
 </body>
